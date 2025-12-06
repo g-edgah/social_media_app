@@ -9,6 +9,9 @@ import morgan from 'morgan'
 import bodyParser from 'body-parser'
 import { fileURLToPath } from 'url';
 
+import { register } from './controller/auth.js'
+import { connectDB } from './db/db.js'
+
 
 //config
 dotenv.config();
@@ -33,7 +36,7 @@ const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'src/assets');
     }, filename: function (req, file, cb) {
-        cb(null, file.originalname);
+        cb(null, file.originalname);//file.originalname can be dangerous (path traversal, special characters)
     },
 });
 
@@ -57,13 +60,16 @@ const upload = multer({
   })
 
 
+//extracts data under key 'picture' applies validation then parses metadata into req.file and the rest of of the key value pairs into req.body. function register is then called
+app.post('/auth/register', upload.single('picture'), register)
+
+
  //mongoose
 const PORT = process.env.PORT||7058;
-mongoose
-    .connect(process.env.MONGO_URL)
-    .then(() => {
-        app.listen(PORT, () => console.log(`connected on port ${PORT}`)) 
+connectDB().then( () => {
+    app.listen(PORT, () => console.log(`connected on port ${PORT}`))
+    }).catch( (error) => {
+        console.log(`error starting app: ${error}`)
     })
-    .catch((error) => console.log(`error: ${error}`))
 
 console.log("the end")
