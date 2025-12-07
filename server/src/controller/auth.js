@@ -2,6 +2,8 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 
+
+//new user registration
 export const register = async (req, res) => {
     //console.log('recieved'+req)
     try {
@@ -43,6 +45,8 @@ export const register = async (req, res) => {
     }
 }
 
+
+//login
 export const login = async (req, res) => {
     try {
         const {
@@ -55,10 +59,14 @@ export const login = async (req, res) => {
 
         //generic error message to prevent enumeration. subtle time differences might still allow enumeration
         const user = await User.findOne({ email: email });
-        if (!user) return res.status(400).json({ message: 'wrong email or password' })
+        if (!user) return res.status(400).json({ message: 'wrong email or password' });
 
         const passwdMatch = await bcrypt.compare(password, user.password);
-        if (!passwdMatch) return res.status(400).json({ message: 'wrong email or password' })
+        if (!passwdMatch) return res.status(400).json({ message: 'wrong email or password' });
+
+        const token = jwt.sign({ id : user._id}, process.env.JWT_SECRET);
+        delete user.password;
+        res.status(200).json({ token, user });
         
     } catch (error) {
         console.log("error logging in: "+error);

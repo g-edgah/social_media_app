@@ -77,4 +77,4 @@ connectDB().then( () => {
         console.log(`error starting app: ${error}`)
     })
 
-console.log("the end")
+//console.log("the end")
