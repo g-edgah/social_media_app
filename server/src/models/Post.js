@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
 
 const postSchema = new mongoose.Schema({
     userId: {
-        type: String
+        type: String,
+        reqquired: true
     },
     firstName: {
         type: String,
@@ -29,11 +30,11 @@ const postSchema = new mongoose.Schema({
     },
     picturePath: {
         type: String,
-        default: '',
     },
+    //map is more efficient than array as the app scales. maps are type objects with different features that make them perfect for this use case
     likes: {
-        type: Object,
-        default: {},
+        type: map,
+        of: Boolean,
     },
     comments: {
         type: Array,
@@ -45,3 +46,7 @@ const postSchema = new mongoose.Schema({
     strict: true,
     collection: 'posts'
 })
+
+const Post = mongoose.model('Post', postSchema);
+
+export default Post;
