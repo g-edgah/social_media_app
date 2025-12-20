@@ -33,7 +33,7 @@ const postSchema = new mongoose.Schema({
     },
     //map is more efficient than array as the app scales. maps are type objects with different features that make them perfect for this use case
     likes: {
-        type: map,
+        type: Map,
         of: Boolean,
     },
     comments: {

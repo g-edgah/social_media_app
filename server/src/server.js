@@ -68,9 +68,9 @@ const upload = multer({
   })
 
 
-//extracts data under key 'picture' applies validation then parses metadata into req.file and the rest of of the key value pairs into req.body. function register is then called
+//extracts data under k[SZWHJ N NH]and the rest of of the key value pairs into req.body. function register is then called
 app.post('/auth/register', upload.single('picture'), register)
-app.post('/auth/register', verifyToken, upload.single('picture'), createPost)
+app.post('/posts', verifyToken, upload.single('picture'), createPost)
 
 
 //routes

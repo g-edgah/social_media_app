@@ -13,15 +13,16 @@ export const createPost = async() => {
 
         const newPost = new Post({
             userId,
-            firstNmae: user.firstName,
+            firstName: user.firstName,
             lastName: user.lastName,
             location: user.location,
             description,
-            userPicturePat: user.picturePath,
+            userPicturePath: user.picturePath,
             picturePath,
             likes: {},
             comments: [],
         })
+        
         await newPost.save();
 
         //return updated posts(all posts including the new one)
@@ -49,7 +50,7 @@ export const getUserPosts = async(req, res) => {
     try {
         const { userId } = req.params;
 
-        const posts = await Post.find({ userId });\
+        const posts = await Post.find({ userId });
         res.status(200).json({posts})
 
     }catch (error) {
