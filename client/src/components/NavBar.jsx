@@ -81,7 +81,7 @@ const NavBar = () => {
                             }}
                             input={<InputBase />}
                             >
-                                <MenuItem value={fullllName}>
+                                <MenuItem value={fullName}>
                                     <Typography>{fullName}</Typography>
                                 </MenuItem>
                                 <MenuItem onClick={() => dispatch(setLogout)}>  Log Out</MenuItem>
@@ -104,7 +104,7 @@ const NavBar = () => {
                     zIndex='10'
                     maxWidth='500px'
                     minWidth='300px'
-                    backGroundColor={background}>
+                    backgroundColor={background}>
 
                         {/* close icon */}
                         <Box display='flex' justifyContent='flex-end' p='1rem'>
@@ -143,7 +143,7 @@ const NavBar = () => {
                                     }}
                                     input={<InputBase />}
                                     >
-                                        <MenuItem value={fullllName}>
+                                        <MenuItem value={fullName}>
                                             <Typography>{fullName}</Typography>
                                         </MenuItem>
                                         <MenuItem onClick={() => dispatch(setLogout)}>  Log Out</MenuItem>
