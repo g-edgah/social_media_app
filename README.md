@@ -4,7 +4,7 @@
 
 the application is a fully fuctional social media application named 'socio' (not very creative, I know) with a frontent (client) built with react and vite and a backend build with node and express.
 
-##frontend
+## frontend
 the frontend features a:
  *login/register page that allows new users to create accounts and regular users to log into their accounts using an email and a password. 
  *homepage that features sections for:
@@ -20,7 +20,7 @@ the frontend features a:
 
 the navigation bar allows the user to perform basic functions like log out of their account and switch between light and dark mode
 
-##backend
+## backend
 the backend is mainly build with node and express. it includes APIs for:
   authentication using jsonwebtokens
   fetching and updating user information via CRUD operations
