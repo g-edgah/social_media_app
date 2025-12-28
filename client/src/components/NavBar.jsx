@@ -37,7 +37,7 @@ const NavBar = () => {
                         }
                     }}
                 >
-                    FUSA
+                    soshio
                 </Typography>
 
                 {isNonMobileScreens && (
@@ -84,7 +84,10 @@ const NavBar = () => {
                                 <MenuItem value={fullName}>
                                     <Typography>{fullName}</Typography>
                                 </MenuItem>
-                                <MenuItem onClick={() => dispatch(setLogout)}>  Log Out</MenuItem>
+                                <MenuItem onClick={() => {
+                                    dispatch(setLogout()); 
+                                    navigate('/login')
+                                }}>  Log Out</MenuItem>
                         </Select>
                     </FormControl>
                 </FlexBetween>

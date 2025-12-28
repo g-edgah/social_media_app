@@ -14,12 +14,12 @@ const LoginPage = () => {
                     fontSize='32px'
                     color='primary'
                 >
-                    FUSA
+                    soshio
                 </Typography>
             </Box>
             <Box width = {isNonMobileScreens ? '50%' : '93%' } p='2rem' m='2rem auto' borderRadius='1.5rem' backgroundColor={theme.palette.background.alt}> 
                 <Typography fontWeight='500' variant='h5' sx={{ mb: '1.5rem' }}>
-                    Welcome to FUSA
+                    Welcome to soshio
                 </Typography>
                 <Form />
 
