@@ -1,6 +1,6 @@
 # Socio - Social Media Application
 
-![React](https://img.shields.io/badge/React-18.2-blue) ![Node.js](https://img.shields.io/badge/Node.js-18-green) ![Express](https://img.shields.io/badge/Express-4.18-lightgrey) ![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-1.9-red) ![Vite](https://img.shields.io/badge/Vite-4.4-%23646CFF?style=flat&logo=vite&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-18-green) ![Express](https://img.shields.io/badge/Express-4.18-lightgrey) ![React](https://img.shields.io/badge/React-18.2-blue) ![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-1.9-red) ![Vite](https://img.shields.io/badge/Vite-4.4-%23646CFF?style=flat&logo=vite&logoColor=white)
 
 ## 📖 Overview
 
