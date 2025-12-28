@@ -37,6 +37,8 @@ const AdvertWidget = () => {
                 <Typography color={medium}>
                     ishimilele.com
                 </Typography>
+            </FlexBetween>
+            <FlexBetween>
                 <Typography color={medium} m='0.5rem 0'>
                     cosmetics that make you feel and look immortal!
                 </Typography>
