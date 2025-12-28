@@ -11,7 +11,7 @@ const AdvertWidget = () => {
     const api_url = import.meta.env.VITE_API_URL;   
 
     return (
-        <WidgetWrapper margin="2rem 0">
+        <WidgetWrapper>
             <FlexBetween>
                 <Typography color={dark} variant="h5" fontWeight="500">
                     Sponsored

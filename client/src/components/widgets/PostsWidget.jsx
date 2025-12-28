@@ -28,7 +28,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
     });
     const data = await response.json();
     //console.log(data);
-    dispatch(setPosts({ posts: data.post }) );
+    dispatch(setPosts({ posts: data.posts }) );
   };  
   
   useEffect(() => {
@@ -40,8 +40,9 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   }, []); 
 
  
-  // if (!Array.isArray(posts.post)) {
-  // console.log("posts is not an array")
+  // if (!Array.isArray(posts)) {
+  //   console.log("posts is not an array")
+  //   console.log(posts);
   // return <div>Loading posts...</div>; // or null, or a loading spinner
   // } 
 

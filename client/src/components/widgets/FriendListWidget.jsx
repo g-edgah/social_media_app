@@ -30,9 +30,9 @@ const FriendListWidget = ({ userId }) => {
     return (
         <WidgetWrapper>
             <Typography color={palette.neutral.dark} variant="h5" fontWeight="500" sx={{ mb: '1.5rem' }}>
-                Friend List
+                Friends List
             </Typography>  
-            <Box flexDirection="column" gap="1.5rem">
+            <FlexBetween flexDirection="column" gap="1.5rem">
                 {friends.map((friend) => (
                     <Friend
                         key={friend._id}
@@ -42,7 +42,7 @@ const FriendListWidget = ({ userId }) => {
                         userPicturePath={friend.picturePath}
                     />
                 ))}
-            </Box>
+            </FlexBetween>
         </WidgetWrapper>    
     );
 };
